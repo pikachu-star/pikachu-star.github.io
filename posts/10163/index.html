@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>用Markdown写Markdown语法 | 空白のBlog</title><meta name="description" content="标题:使用#，可以表示 1-6级标题    示例md代码:  # 第一级标题 ## 第二级标题 ### 第三级标题 #### 第四级标题 ##### 第五级标题 ###### 第六级标题   示例效果：       段落：段落的前后要有空行，所谓的空行是指没有文字内容。若想在段内强制换行的方式是使用两个以上空格加上回车      区块引用    在段落的每行或者只在第一行使用符号 &gt; ,"><meta name="keywords" content="给大佬递茶💊💊"><meta name="author" content="空-白"><meta name="copyright" content="空-白"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/pikachu-star.github.io/img/favicon.png"><link rel="canonical" href="http://pikachu-star/pikachu-star.github.io/posts/10163/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta property="og:type" content="article"><meta property="og:title" content="用Markdown写Markdown语法"><meta property="og:url" content="http://pikachu-star/pikachu-star.github.io/posts/10163/"><meta property="og:site_name" content="空白のBlog"><meta property="og:description" content="标题:使用#，可以表示 1-6级标题    示例md代码:  # 第一级标题 ## 第二级标题 ### 第三级标题 #### 第四级标题 ##### 第五级标题 ###### 第六级标题   示例效果：       段落：段落的前后要有空行，所谓的空行是指没有文字内容。若想在段内强制换行的方式是使用两个以上空格加上回车      区块引用    在段落的每行或者只在第一行使用符号 &gt; ,"><meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><meta property="article:published_time" content="2020-08-08T11:20:09.239Z"><meta property="article:modified_time" content="2020-08-08T14:39:57.159Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/pikachu-star.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="next" title="git和tomcat" href="http://pikachu-star/pikachu-star.github.io/posts/31182/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/pikachu-star.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: true,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: false,
+  postUpdate: '2020-08-08 22:39:57'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="524007577" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@master/Hexo/css/flink.min.css"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="https://cdn.jsdelivr.net/gh/Chocolate1999/cdn/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/pikachu-star.github.io/archives/"><div class="headline">文章</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/pikachu-star.github.io/bangumis/"><i class="fa-fw fab fa-youtube"></i><span> 番剧</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/box/"><i class="fa-fw fab fa-xbox"></i><span> 聚宝盒</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/talk/"><i class="fa-fw far fa-comment"></i><span> 微语</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/pikachu-star.github.io/gallery/"><i class="fa-fw far fa-image"></i><span> 相册</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/home/"><i class="fa-fw fab fa-phoenix-framework"></i><span> 主页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/contact/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/pikachu-star.github.io/">空白のBlog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/pikachu-star.github.io/bangumis/"><i class="fa-fw fab fa-youtube"></i><span> 番剧</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/books/"><i class="fa-fw fas fa-book"></i><span> 书单</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/box/"><i class="fa-fw fab fa-xbox"></i><span> 聚宝盒</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/talk/"><i class="fa-fw far fa-comment"></i><span> 微语</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/pikachu-star.github.io/gallery/"><i class="fa-fw far fa-image"></i><span> 相册</span></a></li><li><a class="site-page" href="/pikachu-star.github.io/home/"><i class="fa-fw fab fa-phoenix-framework"></i><span> 主页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/contact/"><i class="fa-fw far fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/pikachu-star.github.io/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">用Markdown写Markdown语法</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-08-08 19:20:09"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2020-08-08</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-08-08 22:39:57"><i class="fas fa-history fa-fw"></i> 更新于 2020-08-08</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><blockquote>
+<blockquote>
+<p>标题:使用#，可以表示 <strong>1-6级</strong>标题</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>示例md代码:</p>
+<blockquote>
+<p><code># 第一级标题</code></p>
+<p><code>## 第二级标题</code></p>
+<p><code>### 第三级标题</code></p>
+<p><code>#### 第四级标题</code></p>
+<p><code>##### 第五级标题</code></p>
+<p><code>###### 第六级标题</code></p>
+</blockquote>
+</li>
+<li><p>示例效果：</p>
+<p><img src= "/pikachu-star.github.io/img/loading.gif" data-src="https://i.loli.net/2020/08/08/lqbHwvKd6tXP1E3.png" alt="111"></p>
+<hr>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>段落</strong>：段落的前后要有空行，所谓的空行是指没有文字内容。若想在段内强制换行的方式是使用<strong>两个以上空格加上回车</strong></p>
+</blockquote>
+</blockquote>
+<hr>
+<blockquote>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>在段落的每行或者只在第一行使用符号 <strong><code>&gt;</code></strong> ,还可使用多个嵌套引用，如：</p>
+</li>
+<li><p>示例代码：</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; 区块引用</span><br><span class="line">&gt;&gt; &gt; 嵌套引用</span><br><span class="line">&gt;&gt; &gt; &gt;三嵌套引用</span><br><span class="line">&gt;&gt; &gt; &gt; &gt; 四嵌套引用</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>示例效果：</p>
+<blockquote>
+<p><img src= "/pikachu-star.github.io/img/loading.gif" data-src="https://i.loli.net/2020/08/08/QYcobFlGD17eBTK.png" alt="3333"></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p>代码区块</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>代码区块的建立是在每行加上4个空格或者一个制表符（如同写代码一样）。如普通段落：</p>
+<ul>
+<li><p>示例md代码:</p>
+<blockquote>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> &gt;<span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">println(<span class="string">"Hello World!"</span>)</span><br><span class="line"></span><br><span class="line">println(<span class="string">"sum = <span class="subst">$&#123;sum(<span class="number">34</span>, <span class="number">67</span>)&#125;</span>"</span>)</span><br><span class="line">println(<span class="string">"sum = <span class="subst">$&#123;sum(<span class="number">34</span>, <span class="number">67</span>)&#125;</span>"</span>)</span><br><span class="line">println(<span class="string">"sum = <span class="subst">$&#123;sum(<span class="number">34</span>, <span class="number">6</span>, <span class="number">57</span>, <span class="number">34</span>)&#125;</span>"</span>)</span><br><span class="line"></span><br><span class="line">printSum(<span class="number">237</span>, <span class="number">57</span>)</span><br><span class="line">printSum(<span class="number">234</span>, <span class="number">567</span>, <span class="number">8</span>)</span><br><span class="line">vars(<span class="number">1</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">78</span>, <span class="number">0</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">8</span>)</span><br><span class="line"> &gt;&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>示例效果：</p>
+<p><img src= "/pikachu-star.github.io/img/loading.gif" data-src="https://i.loli.net/2020/08/08/3mt6ISl2McLFzgy.png" alt="222"></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意⚠️：需要和普通段落之间存在空行！</strong></p>
+<blockquote>
+<blockquote>
+<p><strong>强调</strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>在强调内容两侧分别加上 <code>*</code>或者 <code>-</code>,如：</p>
+<p>示例md代码:</p>
+<ul>
+<li><pre><code class="undefined">*斜体* ，_斜体_
+**加粗**，__粗体__
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* * 示例效果:![9877](https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;08&#x2F;08&#x2F;S2f6F3bZrKgQT4h.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt;##### 列表 （有序，无序)</span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line">* 使用 **&#96;.&#96;** 、**&#96;+&#96;**、或**&#96;-&#96;** 标记无序列表，如：</span><br><span class="line"></span><br><span class="line">  * 示例md代码:</span><br></pre></td></tr></table></figure>
+-   第一项
++   第二项
+-   第三项
++   第四项
+-   第五项
++   第六项
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">  * 示例效果：![6654](https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;08&#x2F;08&#x2F;L5OtxYPgSyCM4K2.png)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* 使用1. 2. 3. 4. 5. 标记有序列表，如:</span><br><span class="line"></span><br><span class="line">  * 示例md代码:</span><br><span class="line"></span><br><span class="line">    &#96;&#96;&#96;undefined</span><br><span class="line">     1. 第一项</span><br><span class="line">     2. 第二项</span><br><span class="line">     3. 第三项</span><br><span class="line">     4. 第四项</span><br><span class="line">     5. 第五项</span><br><span class="line">     6. 第六项</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+</ul>
+</li>
+<li><p>示例效果: <img src= "/pikachu-star.github.io/img/loading.gif" data-src="https://i.loli.net/2020/08/08/3cgDbZqOPWlK8H1.png" alt="1123123123"></p>
+<hr>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>分割线</strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>分割线最常使用就是三个或以上的 <code>*</code> ， <code>======</code></font>还可以使用 <code>-</code> 和 <code>_</code>。</p>
+<ul>
+<li>示例md代码:</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">---</span><br><span class="line">_____ </span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>示例效果:<img src= "/pikachu-star.github.io/img/loading.gif" data-src="https://i.loli.net/2020/08/08/hKvycL29Porj4b6.png" alt="41324534"></p>
+<hr>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>链接</strong></p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p>链接可以由两种形式生成，<strong>行内式</strong> 和 <strong>参考式</strong>。</p>
+<ul>
+<li><p>行内式：</p>
+<ul>
+<li><p>示例md代码:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">GitHub</span>](http:<span class="comment">//github.com)</span></span><br><span class="line">自动生成连接  &lt;http:<span class="comment">//www.github.com/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>示例效果:!<img src= "/pikachu-star.github.io/img/loading.gif" data-src="https://i.loli.net/2020/08/08/hKvycL29Porj4b6.png" alt="123123123"></p>
+</li>
+</ul>
+<ul>
+<li><p>参考式:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[GitHub][<span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>]<span class="symbol">:http</span><span class="symbol">://github</span>.com</span><br><span class="line">自动生成连接  &lt;<span class="symbol">http:</span>/<span class="regexp">/www.github.com/</span>&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ul>
+<li><p>示例效果:<img src= "/pikachu-star.github.io/img/loading.gif" data-src="https://i.loli.net/2020/08/08/hKvycL29Porj4b6.png" alt="1231231234534"></p>
+<hr>
+</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">空-白</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://pikachu-star/pikachu-star.github.io/posts/10163/">http://pikachu-star/pikachu-star.github.io/posts/10163/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://pikachu-star/pikachu-star.github.io" target="_blank">空白のBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/pikachu-star.github.io/posts/31182/"><img class="next-cover" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="onerror=null;src='/pikachu-star.github.io/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">git和tomcat</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020  <i id="heartbeat" class="fa fas fa-heartbeat"></i> 空-白</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HCLonely/images@master/others/heartbeat.min.css"><meta name="generator" content="Hexo 4.2.1"></head>
+<% if (theme.fireworks.enable) { %>
+<canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas>
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script type="text/javascript" src="/js/fireworks.js"></script>
+<% } %></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/pikachu-star.github.io/js/utils.js"></script><script src="/pikachu-star.github.io/js/main.js"></script><script src="/pikachu-star.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/calendar.js"></script><script src="/js/languages.js"></script><script src="/pikachu-star.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/pikachu-star.github.io/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":290},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
